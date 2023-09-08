@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="195.775" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="Validate the bus ticket booking page" name="Check the search buses functionality for MakeMyTrip - Example #1.1" time="41.305">
+<system-out><![CDATA[
+Given User is on the homepage of MakeMyTrip.................................passed
+When the user clicks on Buses...............................................passed
+And User enters pun city....................................................passed
+And User enters destination city bom........................................passed
+And User selects travelling 1-December-2023.................................passed
+And User clicks on serach button............................................passed
+Then Available Buses should be displayed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate the bus ticket booking page" name="Check the filter functionality for available buses" time="31.427">
+<system-out><![CDATA[
+Given User is on the available buses page...................................passed
+When User selects AC filter.................................................passed
+And User selects seat type..................................................passed
+And User selects pick up time...............................................passed
+And User selects drop time..................................................passed
+And User selects bus........................................................passed
+And User selects seat.......................................................passed
+And User clicks on continue button..........................................passed
+Then Next page for booking should be displayed..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate the bus ticket booking page" name="Check traveller details functionality for valid data" time="60.244">
+<system-out><![CDATA[
+Given User is on available buses page and selects the seat..................passed
+When User is on traveller details page......................................passed
+And User enters valid name..................................................passed
+And User enters valid age...................................................passed
+And User selects gender.....................................................passed
+And User enters valid pincode...............................................passed
+And User selects state......................................................passed
+And User enters address.....................................................passed
+And User checks the checkbox................................................passed
+And User enters valid email.................................................passed
+And User enters valid mobile number.........................................passed
+And User clicks on continue button for payment..............................passed
+Then CheckoutPage should be displayed.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate the bus ticket booking page" name="Check traveller details functionality for invalid data" time="62.491">
+<system-out><![CDATA[
+Given User is on available buses page and selects the seat..................passed
+When User selects seat from the bus.........................................passed
+And User enters name........................................................passed
+And User enters invalid age.................................................passed
+And User selects gender.....................................................passed
+And User enters invalid pincode.............................................passed
+And User any selects state..................................................passed
+And User enters invalid address.............................................passed
+And User checks the checkbox................................................passed
+And User enters invalid email...............................................passed
+And User enters invalid mobile number.......................................passed
+And User clicks on continue button for payment..............................passed
+Then Error Message should be displayed......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
